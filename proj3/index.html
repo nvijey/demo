@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive CSS Image Gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 16px 20px;
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive CSS Image Gallery</h1>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1499551444429-2fd0cfc28686?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8T2NlYW4lMjBDbGlmZnxlbnwwfHwwfHx8MA%3D%3D" alt="Ocean Cliff">
+      <div class="card-content"><h3>Ocean Cliff</h3><p>Waves crashing against rugged cliffs.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Winding Road">
+      <div class="card-content"><h3>Winding Road</h3><p>A journey through golden fields.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1697362927421-be608e543f7b?q=80&w=398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foggy Mountains">
+      <div class="card-content"><h3>Foggy Peaks</h3><p>Mystical fog among mountain tops.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Sunflower Field">
+      <div class="card-content"><h3>Sunflower Field</h3><p>Bright yellow blooms under the sun.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1672234253851-a9dfe84f3989?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8SWNlbGFuZCUyMEVzY2FwZXxlbnwwfHwwfHx8MA%3D%3D" alt="Iceland Landscape">
+      <div class="card-content"><h3>Iceland Escape</h3><p>Volcanic earth and snowy peaks.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1686212164836-218a607f1e73?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fExhdmVuZGVyJTIwRHJlYW1zfGVufDB8fDB8fHww" alt="Lavender Field">
+      <div class="card-content"><h3>Lavender Dreams</h3><p>Endless rows of fragrant purple.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1663950774904-b33d93c9162e?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8JTNEJTIyVHJlZXRvcCUyMFZpZXclMjIlM0V8ZW58MHx8MHx8fDA%3D" alt="Treetop View">
+      <div class="card-content"><h3>Treetop View</h3><p>A high perspective on a green canopy.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1669750820968-df7e127830d1?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fENhbnlvbiUyMFJpdmVyfGVufDB8fDB8fHww" alt="Canyon River">
+      <div class="card-content"><h3>Canyon River</h3><p>A narrow river cuts through rock.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1610829702204-d42b9922d03b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFdpbnRlciUyMEZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D" alt="Winter Forest">
+      <div class="card-content"><h3>Winter Forest</h3><p>Snow-covered silence in the woods.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Desert Dunes">
+      <div class="card-content"><h3>Desert Dunes</h3><p>Golden sands shaped by the wind.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c" alt="Lakeside Cabin">
+      <div class="card-content"><h3>Lakeside Cabin</h3><p>Tranquil getaway by the lake.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Starry Night">
+      <div class="card-content"><h3>Starry Night</h3><p>Milky Way above the forest silhouette.</p></div>
+    </div>
+  </section>
+
+</body>
+</html>
